@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">MyFragmentStudy</string>
+    <string name="weixin">微信</string>
+    <string name="friends">朋友</string>
+    <string name="contacts">联系人</string>
+	<string name="settings">设置</string>
+</resources>
