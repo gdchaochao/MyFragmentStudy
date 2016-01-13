@@ -24,13 +24,13 @@ public class MainActivity extends Activity implements OnClickListener {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 
-		// ³õÊ¼»¯¿Ø¼şºÍÉùÃ÷ÊÂ¼ş
+		// åˆå§‹åŒ–æ§ä»¶å’Œå£°æ˜äº‹ä»¶
 		mTabWeixin = (LinearLayout) findViewById(R.id.tab_bottom_weixin);
 		mTabFriend = (LinearLayout) findViewById(R.id.tab_bottom_friend);
 		mTabWeixin.setOnClickListener(this);
 		mTabFriend.setOnClickListener(this);
 
-		// ÉèÖÃÄ¬ÈÏµÄFragment
+		// è®¾ç½®é»˜è®¤çš„Fragment
 		setDefaultFragment();
 	}
 
@@ -45,7 +45,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		FragmentManager fm = getFragmentManager();
-		// ¿ªÆôFragmentÊÂÎñ
+		// å¼€å¯Fragmentäº‹åŠ¡
 		FragmentTransaction transaction = fm.beginTransaction();
 
 		switch (v.getId()) {
@@ -53,7 +53,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			if (mWeixin == null) {
 				mWeixin = new ContentFragment();
 			}
-			// Ê¹ÓÃµ±Ç°FragmentµÄ²¼¾ÖÌæ´úid_contentµÄ¿Ø¼ş
+			// ä½¿ç”¨å½“å‰Fragmentçš„å¸ƒå±€æ›¿ä»£id_contentçš„æ§ä»¶
 			transaction.replace(R.id.id_content, mWeixin);
 			break;
 		case R.id.tab_bottom_friend:
@@ -64,7 +64,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		}
 		// transaction.addToBackStack();
-		// ÊÂÎñÌá½»
+		// äº‹åŠ¡æäº¤
 		transaction.commit();
 	}
 
